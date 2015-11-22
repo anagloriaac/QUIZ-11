@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+using namespace std;
+
+int checkBanana(string x){
+string text;
+
+int bananas=0, l=0;
+ifstream file(x);
+
+if (File.is_open()==1){
+    cout << "You can open the file"<<endl;
+    while(getline(file, text));
+File.close();
+for (int i=0;i<text.length();i++){
+    if(isupper(text[i])) text[i]=tolower(text[i]);
+}
+while (text.find("banana",l)!=-1){
+    bananas++;
+    l=text.find("banana",l)+1;
+}
+return bananas;
+}
+
+else cout << "You can't open the file";
+return 0;
+}
+
+int main(){
+
+string name;
+cout << "Enter the name: ";
+getline(cin,name);
+cout << "The number of bananas in the file was: " << checkBanana(name) << endl;
+}
