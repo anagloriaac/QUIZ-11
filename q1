@@ -1,28 +1,16 @@
 #include <iostream>
+#include <stdio.h>
 using namespace std;
 
 float CalculateE (float x) {
-int repeat=1;
-float d=1, value=0, fac;
+  float z=1.0f, s=1.0f;
+    for (int i=x-1;i>0;--i)
+      s=1+z*s/i;
 
-  if (x>=1)
-  return 2;
-
-while  (d>x){
-fac=1;
-  for (int i=1;i<repeat;i++) {
-    fac=fac*i;
-  }
-
-value=value+1/fac;
-d=1/fac;
-repeat++;
-
-}
-return value;
+return s;
 }
 
-int main(){
+int main() {
   float a;
 
 cout <<"Write the accuracy for e: ";
